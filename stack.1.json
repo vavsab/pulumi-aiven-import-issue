@@ -1,0 +1,310 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2022-04-02T19:35:12.7540481+03:00",
+            "magic": "716f0bdad25b3b8e2145d2be034ba3ea4bdfb2c5330ba1d595d227e45289fbfd",
+            "version": "v3.24.1"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "vavsab",
+                "project": "pulumi-playground",
+                "stack": "aiven-import"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::pulumi:pulumi:Stack::pulumi-playground-aiven-import",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::pulumi:providers:random::default_4_4_2",
+                "custom": true,
+                "id": "c7a3ecbe-0761-4294-a7f3-9c589cf42745",
+                "type": "pulumi:providers:random",
+                "inputs": {
+                    "version": "4.4.2"
+                },
+                "outputs": {
+                    "version": "4.4.2"
+                },
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::random:index/randomString:RandomString::random-string",
+                "custom": true,
+                "id": "uojvd",
+                "type": "random:index/randomString:RandomString",
+                "inputs": {
+                    "__defaults": [
+                        "lower",
+                        "minLower",
+                        "minNumeric",
+                        "minSpecial",
+                        "minUpper"
+                    ],
+                    "length": 5,
+                    "lower": true,
+                    "minLower": 0,
+                    "minNumeric": 0,
+                    "minSpecial": 0,
+                    "minUpper": 0,
+                    "number": false,
+                    "special": false,
+                    "upper": false
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "id": "uojvd",
+                    "length": 5,
+                    "lower": true,
+                    "minLower": 0,
+                    "minNumeric": 0,
+                    "minSpecial": 0,
+                    "minUpper": 0,
+                    "number": false,
+                    "result": "uojvd",
+                    "special": false,
+                    "upper": false
+                },
+                "parent": "urn:pulumi:aiven-import::pulumi-playground::pulumi:pulumi:Stack::pulumi-playground-aiven-import",
+                "provider": "urn:pulumi:aiven-import::pulumi-playground::pulumi:providers:random::default_4_4_2::c7a3ecbe-0761-4294-a7f3-9c589cf42745",
+                "propertyDependencies": {
+                    "length": null,
+                    "number": null,
+                    "special": null,
+                    "upper": null
+                },
+                "sequenceNumber": 3
+            },
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::pulumi:providers:aiven::default_4_5_0",
+                "custom": true,
+                "id": "fbeffa2c-a9f8-4240-ab50-ce51eb753c8a",
+                "type": "pulumi:providers:aiven",
+                "inputs": {
+                    "apiToken": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAJhwfouuopROrKSgUdSa41EJgxwLsW4DctKXUld0y3SfWimNLgnG628YQOKsWNOn9xgkxBOjgp9YUQ9WDhu1jPjhCKnIYR9QqcmXkRB06HWWxRDwwckjt5mGtrzMhp2QmKs611wKaph5Fjvvvr7zamB0mspT/MpDIV09wADLrVT19TetwhTiNKXOSUTsR1VijS7/SNy4svR4pRh9ZwiVOwJiIGTJfe6Gq1ffBbGQD2GowwmgGYtDIPZI6PYtGsv8rAqlxZ4ealew3GFzsJ8Wo7+GJQv9njiPp4Eb07XvKtW5VwRm+XyGdkj8FuWg8KhkIRXCdBLVqVgpbLbeETy2wOpb8uRQJYxtsTCVyN0LH7zfR+dkVMncSqJKHukldeR35O2RmzhR+YPxFHisQ4G7jdM/B4NkF/z5MYZcyusxG7PaOlXac8oZhVS0HN0uBr5AsvoSxvdMvS45OabF3PFVWqryqITm1BWTzzFn7ZDB0vm6og5KhtsyudxusWno3fUzgmXeHN45FrL1A/TQKAUUhZu/Ya+Oq1I="
+                    },
+                    "version": "4.5.0"
+                },
+                "outputs": {
+                    "apiToken": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAHcA56HNR9Tj1O7/ohM39BF4SuVYbp7FA4juY+fokNFjSEGGAvlTOw+GId86xm7PSTZUAg7h1eD3VNSp+xrRRaQGmEzI2p76uQ2+1Eg3472PZwIqy5OZXWfHxSljCn9N5SslIfN2g5LwigiPpfVLMaik3cdnjIjghhHgl4QEL7To0q7zYR7w7e/LyaxjQsh+JUTfQ54ZlORnnvaiu+XXf8N+gJaZjfafoqf/mpVdCD6SfR1blApRK3Dy22B2dLlt7YovBlzKygaOo35C6OzxnTsr8a+ZEtpsTm7wypk55UAmkX8yNcO+yMDckmPm/ZY+oyUJiDiZ9+X8nJEdTrCi1TenOYpKrIA2zP3aclmqYg5qUxMQT3fjLtaYZaRC1IHXIVX1aQmlF9f80Z37YwAtGRwEToN55Z3lGn1syIu9rRiUcAAsdx9paSdY5sImX/Das6fOFCXeEhjtZF0CYsSHlm0E4LwIzZVDQla9WoNr8Yv5vnEL9XYTVcWFglR2eXXdEq6BWf5FEdylutNxKdcsZXLK9ykD8+o="
+                    },
+                    "version": "4.5.0"
+                },
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::aiven:index/project:Project::project",
+                "custom": true,
+                "id": "import-test-uojvd",
+                "type": "aiven:index/project:Project",
+                "inputs": {
+                    "__defaults": [
+                        "addAccountOwnersAdminAccess"
+                    ],
+                    "addAccountOwnersAdminAccess": true,
+                    "project": "import-test-uojvd"
+                },
+                "outputs": {
+                    "addAccountOwnersAdminAccess": true,
+                    "caCert": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "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"
+                    },
+                    "id": "import-test-uojvd",
+                    "project": "import-test-uojvd"
+                },
+                "parent": "urn:pulumi:aiven-import::pulumi-playground::pulumi:pulumi:Stack::pulumi-playground-aiven-import",
+                "dependencies": [
+                    "urn:pulumi:aiven-import::pulumi-playground::random:index/randomString:RandomString::random-string"
+                ],
+                "provider": "urn:pulumi:aiven-import::pulumi-playground::pulumi:providers:aiven::default_4_5_0::fbeffa2c-a9f8-4240-ab50-ce51eb753c8a",
+                "propertyDependencies": {
+                    "project": [
+                        "urn:pulumi:aiven-import::pulumi-playground::random:index/randomString:RandomString::random-string"
+                    ]
+                },
+                "sequenceNumber": 1
+            },
+            {
+                "urn": "urn:pulumi:aiven-import::pulumi-playground::aiven:index/pg:Pg::postgres",
+                "custom": true,
+                "id": "import-test-uojvd/postgres-uojvd",
+                "type": "aiven:index/pg:Pg",
+                "inputs": {
+                    "__defaults": [],
+                    "cloudName": "do-nyc",
+                    "plan": "hobbyist",
+                    "project": "import-test-uojvd",
+                    "serviceName": "postgres-uojvd"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"default\":300000000000,\"delete\":1200000000000,\"read\":300000000000,\"update\":1200000000000}}",
+                    "cloudName": "do-nyc",
+                    "components": [
+                        {
+                            "component": "pg",
+                            "host": "postgres-uojvd-import-test-uojvd.aivencloud.com",
+                            "kafkaAuthenticationMethod": "",
+                            "port": 16469,
+                            "route": "dynamic",
+                            "ssl": false,
+                            "usage": "primary"
+                        }
+                    ],
+                    "diskSpaceCap": "0B",
+                    "diskSpaceDefault": "8GiB",
+                    "diskSpaceStep": "0B",
+                    "diskSpaceUsed": "8GiB",
+                    "id": "import-test-uojvd/postgres-uojvd",
+                    "maintenanceWindowDow": "friday",
+                    "maintenanceWindowTime": "09:30:51",
+                    "pg": {
+                        "dbname": "defaultdb",
+                        "host": "167.172.247.19",
+                        "password": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "AAABAJVYugqAVsPwrh8ejImtKuoDBZXtipNdLgVoM+k5NaUSsZeEKvdxsRXBV4zz0pM="
+                        },
+                        "port": 16469,
+                        "replicaUri": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "AAABAJxzdHQ7LNJhujPBgFZq9ZAcLTXqQFbSqohI8b77Yw=="
+                        },
+                        "sslmode": "require",
+                        "uri": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "AAABALlymdEF6xLY8F/1nJ73zMvV/g3/g2osN2HE5K3VCdp3yqEc76dRsxLkapQLZaMPLZq7h8cwjJzcby+D569UoHr5FNaFrh22w8Cdjuj3PU9j0NyrWcQPwMQ+01yRJ89jh4MrrIip+/LySzs3h84HalDH"
+                        },
+                        "user": "avnadmin"
+                    },
+                    "pgUserConfig": {
+                        "adminPassword": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "AAABAHINWQxmEyFyDjvbYTGT9WG4Tvu0pPvFAGTleCMUMA=="
+                        },
+                        "adminUsername": "",
+                        "backupHour": "3",
+                        "backupMinute": "57",
+                        "ipFilters": [
+                            "0.0.0.0/0"
+                        ],
+                        "migration": null,
+                        "pg": {
+                            "autovacuumAnalyzeScaleFactor": "",
+                            "autovacuumAnalyzeThreshold": "",
+                            "autovacuumFreezeMaxAge": "",
+                            "autovacuumMaxWorkers": "",
+                            "autovacuumNaptime": "",
+                            "autovacuumVacuumCostDelay": "",
+                            "autovacuumVacuumCostLimit": "",
+                            "autovacuumVacuumScaleFactor": "",
+                            "autovacuumVacuumThreshold": "",
+                            "bgwriterDelay": "",
+                            "bgwriterFlushAfter": "",
+                            "bgwriterLruMaxpages": "",
+                            "bgwriterLruMultiplier": "",
+                            "deadlockTimeout": "",
+                            "defaultToastCompression": "",
+                            "idleInTransactionSessionTimeout": "",
+                            "jit": "",
+                            "logAutovacuumMinDuration": "",
+                            "logErrorVerbosity": "",
+                            "logLinePrefix": "",
+                            "logMinDurationStatement": "",
+                            "maxFilesPerProcess": "",
+                            "maxLocksPerTransaction": "",
+                            "maxLogicalReplicationWorkers": "",
+                            "maxParallelWorkers": "",
+                            "maxParallelWorkersPerGather": "",
+                            "maxPredLocksPerTransaction": "",
+                            "maxPreparedTransactions": "",
+                            "maxReplicationSlots": "",
+                            "maxSlotWalKeepSize": "",
+                            "maxStackDepth": "",
+                            "maxStandbyArchiveDelay": "",
+                            "maxStandbyStreamingDelay": "",
+                            "maxWalSenders": "",
+                            "maxWorkerProcesses": "",
+                            "pgPartmanBgwDotInterval": "",
+                            "pgPartmanBgwDotRole": "",
+                            "pgStatStatementsDotTrack": "",
+                            "tempFileLimit": "",
+                            "timezone": "",
+                            "trackActivityQuerySize": "",
+                            "trackCommitTimestamp": "",
+                            "trackFunctions": "",
+                            "trackIoTiming": "",
+                            "walSenderTimeout": "",
+                            "walWriterDelay": ""
+                        },
+                        "pgReadReplica": "",
+                        "pgServiceToForkFrom": "",
+                        "pgVersion": "14",
+                        "pgbouncer": null,
+                        "pglookout": {
+                            "maxFailoverReplicationTimeLag": "60"
+                        },
+                        "privateAccess": null,
+                        "privatelinkAccess": null,
+                        "projectToForkFrom": "",
+                        "publicAccess": null,
+                        "recoveryTargetTime": "",
+                        "serviceToForkFrom": "",
+                        "sharedBuffersPercentage": "",
+                        "staticIps": "",
+                        "synchronousReplication": "",
+                        "timescaledb": null,
+                        "variant": "",
+                        "workMem": ""
+                    },
+                    "plan": "hobbyist",
+                    "project": "import-test-uojvd",
+                    "serviceHost": "postgres-uojvd-import-test-uojvd.aivencloud.com",
+                    "serviceName": "postgres-uojvd",
+                    "servicePassword": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAHsV7vqmjQNc7x7F24OZARlmxsxnKeMes1BQ26WG+NPMROWlbrqh3qIKADprEnI="
+                    },
+                    "servicePort": 16469,
+                    "serviceType": "pg",
+                    "serviceUri": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABABp3+vp4kWkgVpOGOHITzYpMAxKxC8/+/jWZidKq3nQaLL4xSaaa9XpRrCqNSPmlCxOwAE1Ua0SB3gtohxFqHUSgklIE9pbn/6bblDw06E/f8OPkBzRaPY+OaGf+YyDUg4h8X7gHFoZurcBoY9CI/r/CYwQcdkWICdKjEheHy/E78CjwyYu4iIfFdFGeaAeMjtYy"
+                    },
+                    "serviceUsername": "avnadmin",
+                    "state": "RUNNING",
+                    "staticIps": [],
+                    "terminationProtection": false
+                },
+                "parent": "urn:pulumi:aiven-import::pulumi-playground::pulumi:pulumi:Stack::pulumi-playground-aiven-import",
+                "dependencies": [
+                    "urn:pulumi:aiven-import::pulumi-playground::aiven:index/project:Project::project",
+                    "urn:pulumi:aiven-import::pulumi-playground::random:index/randomString:RandomString::random-string"
+                ],
+                "provider": "urn:pulumi:aiven-import::pulumi-playground::pulumi:providers:aiven::default_4_5_0::fbeffa2c-a9f8-4240-ab50-ce51eb753c8a",
+                "propertyDependencies": {
+                    "cloudName": null,
+                    "plan": null,
+                    "project": [
+                        "urn:pulumi:aiven-import::pulumi-playground::aiven:index/project:Project::project"
+                    ],
+                    "serviceName": [
+                        "urn:pulumi:aiven-import::pulumi-playground::random:index/randomString:RandomString::random-string"
+                    ]
+                },
+                "sequenceNumber": 1
+            }
+        ]
+    }
+}
